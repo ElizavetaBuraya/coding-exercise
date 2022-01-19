@@ -43,7 +43,7 @@ const Transactions: FC<ITransactions> = ({
       <Card key={transaction.transactionId} className="transaction-card">
         <CardContent className="transaction-card-content">
           <p>{transaction.description}</p>
-          <p>{`${transaction.amount} ${currency}`}</p>
+          <p>{transaction.amount} {currency}</p>
           <p>{new Date(transaction.bookingDate).toLocaleDateString()}</p>
         </CardContent>
       </Card>

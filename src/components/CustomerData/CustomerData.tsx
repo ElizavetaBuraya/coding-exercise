@@ -50,7 +50,7 @@ const CustomerData: FC<ICustomerData> = ({
 
   const renderBalanceData = (balance: IBalanceStats) => (
     <ul>
-      <li><b>Amount:</b> {balance.amount}</li>
+      <li><b>Amount:</b> {balance.amount} {selectedAccount.currencyCode}</li>
       <li><b>Credit Debit Indicator:</b> {balance.creditDebitIndicator}</li>
       <li><b>Credit Lines:</b> {balance.creditLines.length === 0 ? "None" : balance.creditLines.join(", ")}</li>
     </ul>
@@ -79,8 +79,8 @@ const CustomerData: FC<ICustomerData> = ({
         <CardContent className="customer-card">
           <div>
             <h2>Total Debits and Total Credits</h2>
-            <h3>Total Credit: {calculatedTransactions.totalCredit.toFixed(2)}</h3>
-            <h3>Total Debit: {calculatedTransactions.totalDebit.toFixed(2)}</h3>
+            <h3>Total Credit: {calculatedTransactions.totalCredit.toFixed(2)} {selectedAccount.currencyCode}</h3>
+            <h3>Total Debit: {calculatedTransactions.totalDebit.toFixed(2)} {selectedAccount.currencyCode}</h3>
           </div>
           <div>
             <h2>Balances</h2>
