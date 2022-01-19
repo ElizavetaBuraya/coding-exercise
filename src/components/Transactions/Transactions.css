@@ -1,0 +1,65 @@
+.transactions {
+  background-color: white;
+  padding: 0 2% 4% 2%;
+}
+
+.transactions h1 {
+  margin-bottom: 20px;
+}
+
+.transactions-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions-table {
+  position: relative;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions-header p {
+  width: 33%;
+}
+
+.transactions-header p:nth-child(2) {
+  text-align: center;
+}
+
+.transactions-header p:last-child {
+  text-align: end;
+}
+
+.transactions-content {
+  max-height: 70vh;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.transaction-card {
+  margin-bottom: 10px;
+}
+
+.transaction-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-card-content p {
+  width: 33%;
+}
+
+.transaction-card-content p:first-child {
+  word-break: break-word;
+}
+
+.transaction-card-content p:nth-child(2) {
+  text-align: center;
+}
+
+.transaction-card-content p:last-child {
+  text-align: end;
+}
