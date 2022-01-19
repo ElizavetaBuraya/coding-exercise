@@ -14,12 +14,14 @@ import SearchIcon from '@mui/icons-material/Search';
 
 interface ITransactions {
   transactions: ITransaction[];
+  currency: string;
 }
 
 const PAGE_SIZE = [25, 50, 100];
 
 const Transactions: FC<ITransactions> = ({
   transactions,
+  currency,
 }) => {
   const [pageSize, setPageSize] = useState<number>(25);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -41,7 +43,7 @@ const Transactions: FC<ITransactions> = ({
       <Card key={transaction.transactionId} className="transaction-card">
         <CardContent className="transaction-card-content">
           <p>{transaction.description}</p>
-          <p>{transaction.amount}</p>
+          <p>{`${transaction.amount} ${currency}`}</p>
           <p>{new Date(transaction.bookingDate).toLocaleDateString()}</p>
         </CardContent>
       </Card>
@@ -68,6 +70,7 @@ const Transactions: FC<ITransactions> = ({
         <TextField
           id="search-textfield"
           label="Search"
+          className="transactions-search"
           onChange={handleSearch}
           InputProps={{
             startAdornment: (
@@ -102,7 +105,14 @@ const Transactions: FC<ITransactions> = ({
           {visibleTransactions.map((transaction) => renderTransaction(transaction))}
         </div>
         <Stack spacing={2}>
-          <Pagination count={10} variant="outlined" shape="rounded" page={currentPage} onChange={handleChange} />
+          <Pagination 
+            className="transactions-pagination" 
+            count={10} 
+            variant="outlined" 
+            shape="rounded" 
+            page={currentPage} 
+            onChange={handleChange} 
+          />
         </Stack>
       </div>
     </section>

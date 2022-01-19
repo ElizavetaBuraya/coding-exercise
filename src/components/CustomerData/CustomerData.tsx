@@ -76,19 +76,18 @@ const CustomerData: FC<ICustomerData> = ({
         </FormControl>
       </div>
       <Card>
-        <CardContent>
-          <h2>Balances</h2>
-          <div className="customer-info">
-            <div>
-              <h3>Available</h3>
+        <CardContent className="customer-card">
+          <div>
+            <h2>Total Debits and Total Credits</h2>
+            <h3>Total Credit: {calculatedTransactions.totalCredit.toFixed(2)}</h3>
+            <h3>Total Debit: {calculatedTransactions.totalDebit.toFixed(2)}</h3>
+          </div>
+          <div>
+            <h2>Balances</h2>
+            <h3>Available</h3>
               {renderBalanceData(available)}
               <h3>Current</h3>
               {renderBalanceData(current)}
-            </div>
-            <div>
-              <h3>Total Credit: {calculatedTransactions.totalCredit}</h3>
-              <h3>Total Debit: {calculatedTransactions.totalDebit}</h3>
-            </div>
           </div>
         </CardContent>
       </Card>

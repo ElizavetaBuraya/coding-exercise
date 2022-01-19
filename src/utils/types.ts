@@ -20,35 +20,46 @@ export interface IBalance {
   available: IBalanceStats;
 }
 
+interface ITransactionCode {
+  code: string;
+  subCode: string;
+}
+
+interface IMerchantDetails {
+  merchantName: string |  null;
+  merchantCategoryCode: string |  null;
+}
+
+interface IEnrichedDataDetails {
+  id: number;
+  name: string;
+  confidence: number;
+}
+
+interface IEnrichedData {
+  category: IEnrichedDataDetails;
+  class: IEnrichedDataDetails;
+  predictedMerchantName: string |  null;
+}
+
 export interface ITransaction {
   transactionId: string;
   description: string;
   amount: number;
   creditDebitIndicator: string;
   status: string;
-  transactionCode: {
-      code: string;
-      subCode: string;
-  },
+  transactionCode: ITransactionCode;
   proprietaryTransactionCode: string |  null;
   bookingDate: string;
-  merchantDetails: {
-      merchantName: string |  null;
-      merchantCategoryCode: string |  null;
-  },
-  enrichedData: {
-      category: {
-          id: number;
-          name: string;
-          confidence: number;
-      },
-      class: {
-          id: number;
-          name: string;
-          confidence: number;
-      },
-      predictedMerchantName: string |  null;
-  }
+  merchantDetails: IMerchantDetails;
+  enrichedData: IEnrichedData;
+}
+
+interface IIdentifiers {
+  accountNumber: string;
+  bankCode: string;
+  iban: string |  null;
+  secondaryIdentification: string | null;
 }
 
 export interface IAccount {
@@ -58,12 +69,7 @@ export interface IAccount {
   accountHolderNames: string;
   accountType: string;
   accountSubType: string;
-  identifiers: {
-    accountNumber: string;
-    bankCode: string;
-    iban: string |  null;
-    secondaryIdentification: string | null;
-  },
+  identifiers: IIdentifiers;
   parties: IParty[];
   balances: IBalance;
   transactions: ITransaction[];

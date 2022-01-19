@@ -10,6 +10,11 @@
 .transactions-controls {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.transactions-search {
+  width: 30%;
 }
 
 .transactions-table {
@@ -23,6 +28,7 @@
 
 .transactions-header p {
   width: 33%;
+  padding: 0 1%;
 }
 
 .transactions-header p:nth-child(2) {
@@ -34,8 +40,6 @@
 }
 
 .transactions-content {
-  max-height: 70vh;
-  overflow-y: scroll;
   margin-bottom: 20px;
 }
 
@@ -62,4 +66,9 @@
 
 .transaction-card-content p:last-child {
   text-align: end;
+}
+
+.transactions-pagination {
+  display: flex;
+  justify-content: right;
 }

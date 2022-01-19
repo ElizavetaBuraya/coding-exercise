@@ -37,7 +37,7 @@ const App: FC = () => {
         countryCode={data.countryCode}
       />
       <CustomerData accounts={data.accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} />
-      <Transactions transactions={selectedAccount.transactions} />
+      <Transactions transactions={selectedAccount.transactions} currency={selectedAccount.currencyCode} />
     </div>
   );
 };
