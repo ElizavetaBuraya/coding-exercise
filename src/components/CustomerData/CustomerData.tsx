@@ -32,7 +32,7 @@ const CustomerData: FC<ICustomerData> = ({
       if (cur.creditDebitIndicator === TRANSACTION_INDICATORS.credit) {
         acc.totalCredit = acc.totalCredit + cur.amount;
       } else if (cur.creditDebitIndicator === TRANSACTION_INDICATORS.debit) {
-        acc.totalDebit = acc.totalCredit + cur.amount;
+        acc.totalDebit = acc.totalDebit + cur.amount;
       }
 
       return acc;
@@ -57,7 +57,7 @@ const CustomerData: FC<ICustomerData> = ({
   )
 
   return (
-    <section className="customer-data">
+    <section data-testid="customer-data" className="customer-data">
       <div className="customer-data-header">
         <h1>Accounts</h1>
         <FormControl>

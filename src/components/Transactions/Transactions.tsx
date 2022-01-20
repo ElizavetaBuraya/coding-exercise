@@ -64,7 +64,7 @@ const Transactions: FC<ITransactions> = ({
   }
 
   return (
-    <section className="transactions">
+    <section  data-testid="transactions" className="transactions">
       <h1>Transactions</h1>
       <div className="transactions-controls">
         <TextField
