@@ -13,7 +13,7 @@ const AccountInfo: FC<IAccountInfo> = ({
   countryCode,
 }) => {
   return (
-    <section  data-testid="account-info" className="account-info">
+    <section data-testid="account-info" className="account-info">
       <h1>Account Holder Name: {accountHolderName}</h1>
       <div>
         <p>
