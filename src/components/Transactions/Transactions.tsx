@@ -50,7 +50,7 @@ const Transactions: FC<ITransactions> = ({
     );
   }
 
-  const handleChange = (event: ChangeEvent<unknown>, value: number) => {
+  const handleChangePage = (event: ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };
 
@@ -111,7 +111,7 @@ const Transactions: FC<ITransactions> = ({
             variant="outlined" 
             shape="rounded" 
             page={currentPage} 
-            onChange={handleChange} 
+            onChange={handleChangePage} 
           />
         </Stack>
       </div>
