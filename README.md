@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Coding Excercise
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## External Libraries
+
+[Material UI](https://mui.com/)
+
+## Resources
+
+[Wireframe](https://directidcdnstorage.blob.core.windows.net/test-data/Wireframe_v1.1.png?sv=2020-08-04&st=2022-01-10T17%3A20%3A32Z&se=2022-03-10T17%3A20%3A00Z&sr=b&sp=r&sig=yPsQJiFyAWpPoN3ZHLrypiXMtjcgCIJ6yzu3%2FGKCqDw%3D)
+[Data Source](https://directidcdnstorage.blob.core.windows.net/test-data/apollo-carter.json?sv=2020-08-04&st=2022-01-10T17%3A19%3A16Z&se=2022-03-01T17%3A19%3A00Z&sr=b&sp=r&sig=E8NsHdPpTnGACUPazODd52xdwXpjG7JF%2BfIdDd9tLwI%3D)
+
+## Assumptions
+
+- Total Credit and Total Debit should be rounded to 2 decimals
+- Total Credit should be calculated as a sum of all transactions with creditDebitIndicator equaling "Credit"
+- Total Debit should be calculated as a sum of all transactions with creditDebitIndicator equaling "Debit"
+- Transactions section should display description, amount and date of every transaction
 
 ## Available Scripts
 
@@ -17,7 +33,6 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -27,8 +42,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
@@ -36,11 +49,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
